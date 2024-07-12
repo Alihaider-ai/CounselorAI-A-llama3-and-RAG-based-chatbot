@@ -45,18 +45,19 @@ This project implements a Flask-based chatbot that answers questions about the C
     Open your browser and navigate to `http://127.0.0.1:5000` to interact with the chatbot.
 
 ## Project Structure
-CounselorAI-A-llama3-and-RAG-based-chatbot
-/
-│
+
+```bash
+CounselorAI-A-llama3-and-RAG-based-chatbot/
 ├── templates/
-│ └── index.html # HTML template for the chatbot interface
+│   └── index.html            # HTML template for the chatbot interface
 │
-├── app.py # Main Flask application
-├── requirements.txt # Python dependencies
-├── knowledge_base.pdf # PDF document of the Constitution of Pakistan
-├── faiss_index.pkl # Serialized FAISS index (generated)
-├── docs.pkl # Serialized document splits (generated)
-└── README.md # This README file/
+├── app.py                    # Main Flask application
+├── requirements.txt          # Python dependencies
+├── knowledge_base.pdf        # PDF document of the Constitution of Pakistan
+├── faiss_index.pkl           # Serialized FAISS index (generated)
+├── docs.pkl                  # Serialized document splits (generated)
+└── README.md                 # This README file
+```
 
 ## Key Functions
 
