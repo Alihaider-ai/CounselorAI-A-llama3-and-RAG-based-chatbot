@@ -23,8 +23,7 @@ This project implements a Flask-based chatbot that answers questions about the C
 
 1. **Clone the Repository**
     ```bash
-    git clone https://github.com/yourusername/constitution-chatbot.git
-    cd constitution-chatbot
+    git clone https://github.com/Alihaider-ai/CounselorAI-A-llama3-and-RAG-based-chatbot.git
     ```
 
 2. **Install Dependencies**
