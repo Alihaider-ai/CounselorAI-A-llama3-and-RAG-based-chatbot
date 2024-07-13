@@ -19,11 +19,8 @@ logging.basicConfig(level=logging.DEBUG)
 # Initialize the Flask application
 app = Flask(__name__)
 
-# Create embeddings using sentence-transformers
-embedder = SentenceTransformer('all-MiniLM-L6-v2')
-
 # Define paths
-pdf_path = "knowledge base.pdf"
+pdf_path = "knowledge_base.pdf"
 index_path = "faiss_index.pkl"
 docs_path = "docs.pkl"
 
@@ -64,13 +61,16 @@ else:
 # Create retriever with similarity search
 retriever = db.as_retriever(search_type="similarity", search_kwargs={"k": 5})
 
-# Set up Ollama language model - Gemma 2
+# Set up Ollama language model
 local_llm = 'llama3'
-llm = ChatOllama(model=local_llm, keep_alive="3h", max_tokens=1000, temperature=0)
+llm = ChatOllama(model=local_llm, keep_alive="-1", max_tokens=3000, temperature=0)
 
 # Create prompt template
-template = """Answer the question based only on the following context:
+template = """Answer the question based only on the following context and conversation history:
 {context}
+
+# Conversation History:
+# {history}
 
 Question: {question}
 
@@ -83,18 +83,36 @@ def print_and_pass_prompt(formatted_prompt):
 
 # Create the RAG chain using LCEL with prompt printing and streaming output
 rag_chain = (
-    {"context": retriever, "question": RunnablePassthrough()}
+    {"context": retriever, "history":RunnablePassthrough(), "question": RunnablePassthrough()}
     | prompt
     | print_and_pass_prompt
-    | llm
 )
+print(rag_chain)
+
+# Conversation history
+conversation_history = []
 
 # Function to ask questions
 def ask_question(question):
     try:
+        # Retrieve context from RAG
+        rag_context = rag_chain.invoke(question)
+        # print(rag_context)
+        
+        # Format the conversation history
+        history = "\n".join([f"Q: {q}\nA: {a}" for q, a in conversation_history])
+        
+        # Format the prompt with context, conversation history, and current question
+        formatted_prompt = template.format(context=rag_context, history=history, question=question)
+        
+        # Get answer from LLM
         answer = ""
-        for chunk in rag_chain.stream(question):
+        for chunk in llm.stream(formatted_prompt):
             answer += chunk.content
+
+        # Update conversation history
+        conversation_history.append((question, answer))
+        
         return answer
     except Exception as e:
         logging.error("An error occurred while processing the question: %s", e)
