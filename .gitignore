@@ -2,3 +2,4 @@
 *.txt
 *.pkl
 test.py
+/flask_session

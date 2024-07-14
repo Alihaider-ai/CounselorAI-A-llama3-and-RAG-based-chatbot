@@ -1,28 +1,38 @@
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify, render_template, session
 import os
 import logging
+import traceback
 import fitz  # PyMuPDF
 import pickle
-from sentence_transformers import SentenceTransformer
-from langchain.retrievers import MultiQueryRetriever
-from langchain_openai import OpenAIEmbeddings
+from datetime import timedelta
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain_community.chat_models import ChatOllama
 from langchain_community.document_loaders import PyPDFLoader
 from langchain.prompts import ChatPromptTemplate
 from langchain.schema.runnable import RunnablePassthrough
-
+from flask_session import Session
 # Configure logging
-logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s %(levelname)s %(message)s')
 
 # Initialize the Flask application
 app = Flask(__name__)
-
+app.secret_key = os.urandom(24)  # Replace with a secure key in production
+app.config['SESSION_TYPE'] = 'filesystem'
+app.config['SESSION_PERMANENT'] = False
+app.config['SESSION_USE_SIGNER'] = True
+app.config['TIMEOUT'] = 600
+Session(app)
 # Define paths
 pdf_path = "knowledge_base.pdf"
 index_path = "faiss_index.pkl"
 docs_path = "docs.pkl"
+
+# handeling time out in before request to make sure we dont run into timeout errors
+@app.before_request
+def before_request():
+    session.permanent = True
+    app.permanent_session_lifetime = timedelta(minutes=60)
 
 # Function to extract text from PDF
 def extract_text_from_pdf(pdf_path):
@@ -66,39 +76,45 @@ local_llm = 'llama3'
 llm = ChatOllama(model=local_llm, keep_alive="-1", max_tokens=3000, temperature=0)
 
 # Create prompt template
-template = """Answer the question based only on the following context and conversation history:
+template = """Based solely on the provided context and conversation history, please answer the following question.
+
+Context:
 {context}
 
-# Conversation History:
-# {history}
+Conversation History:
+{history}
 
-Question: {question}
+Question:
+{question}
 
-Answer: """
+Answer:
+
+If the user engages in small talk instead of asking a question ignore the context, continue the conversation naturally and when question is asked responed accoriding to the context provided Maintain a professional tone throughout."""
 prompt = ChatPromptTemplate.from_template(template)
 
 # Function to print and pass through the formatted prompt
 def print_and_pass_prompt(formatted_prompt):
     return formatted_prompt
 
-# Create the RAG chain using LCEL with prompt printing and streaming output
+# Create the RAG chain
 rag_chain = (
-    {"context": retriever, "history":RunnablePassthrough(), "question": RunnablePassthrough()}
+    {"context": retriever, "history": RunnablePassthrough(), "question": RunnablePassthrough()}
     | prompt
     | print_and_pass_prompt
 )
 print(rag_chain)
-
-# Conversation history
-conversation_history = []
 
 # Function to ask questions
 def ask_question(question):
     try:
         # Retrieve context from RAG
         rag_context = rag_chain.invoke(question)
-        # print(rag_context)
         
+        # Retrieve or initialize conversation history
+        if 'conversation_history' not in session:
+            session['conversation_history'] = []
+        conversation_history = session['conversation_history']
+
         # Format the conversation history
         history = "\n".join([f"Q: {q}\nA: {a}" for q, a in conversation_history])
         
@@ -106,17 +122,20 @@ def ask_question(question):
         formatted_prompt = template.format(context=rag_context, history=history, question=question)
         
         # Get answer from LLM
-        answer = ""
-        for chunk in llm.stream(formatted_prompt):
-            answer += chunk.content
+        answer = llm.invoke(formatted_prompt).content
+        print("this is the answer", answer)
+        # for chunk in llm.stream(formatted_prompt):
+        #     answer += chunk.content
 
         # Update conversation history
         conversation_history.append((question, answer))
+        session['conversation_history'] = conversation_history
         
         return answer
     except Exception as e:
-        logging.error("An error occurred while processing the question: %s", e)
-        return "An error occurred while processing your question."
+        error_message = "An error occurred while processing your question."
+        logging.error(f"{error_message}\n{traceback.format_exc()}")
+        return error_message
 
 @app.route('/')
 def index():
@@ -129,4 +148,4 @@ def ask():
     return jsonify({'answer': answer})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True,host='0.0.0.0')
