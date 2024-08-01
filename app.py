@@ -6,6 +6,7 @@ import fitz  # PyMuPDF
 import pickle
 from datetime import timedelta
 from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_community.embeddings import OllamaEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain_community.chat_models import ChatOllama
 from langchain_community.document_loaders import PyPDFLoader
@@ -64,7 +65,7 @@ if os.path.exists(index_path) and os.path.exists(docs_path):
 else:
     loader = PyPDFLoader(pdf_path)
     pages = loader.load_and_split()
-    db = FAISS.from_documents(pages, HuggingFaceEmbeddings())
+    db = FAISS.from_documents(pages, OllamaEmbeddings(model="nomic-embed-text",show_progress=True))
     save_faiss_index(db, pages, index_path, docs_path)
     logging.info("Created new FAISS index and saved to disk.")
 
@@ -73,7 +74,7 @@ retriever = db.as_retriever(search_type="similarity", search_kwargs={"k": 5})
 
 # Set up Ollama language model
 local_llm = 'llama3'
-llm = ChatOllama(model=local_llm, keep_alive="-1", max_tokens=3000, temperature=0)
+llm = ChatOllama(model=local_llm, keep_alive="-1", max_tokens=3000, temperature=0) # add base_url if your model is deployed on other pc
 
 # Create prompt template
 template = """Based solely on the provided context and conversation history, please answer the following question.
