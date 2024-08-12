@@ -1,0 +1,424 @@
+2024-08-13 00:50:56,417 DEBUG Environment variable FAISS_OPT_LEVEL is not set, so let's pick the instruction set according to the current CPU
+2024-08-13 00:50:56,417 INFO Loading faiss with AVX2 support.
+2024-08-13 00:50:56,484 INFO Successfully loaded faiss with AVX2 support.
+2024-08-13 00:50:56,506 INFO Loaded existing FAISS index from disk.
+2024-08-13 00:50:56,543 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.18.7:5000
+2024-08-13 00:50:56,543 INFO [33mPress CTRL+C to quit[0m
+2024-08-13 00:50:56,566 INFO  * Restarting with watchdog (windowsapi)
+2024-08-13 00:50:58,002 DEBUG Environment variable FAISS_OPT_LEVEL is not set, so let's pick the instruction set according to the current CPU
+2024-08-13 00:50:58,002 INFO Loading faiss with AVX2 support.
+2024-08-13 00:50:58,024 INFO Successfully loaded faiss with AVX2 support.
+2024-08-13 00:50:58,042 INFO Loaded existing FAISS index from disk.
+2024-08-13 00:50:58,060 WARNING  * Debugger is active!
+2024-08-13 00:50:58,060 INFO  * Debugger PIN: 633-891-049
+2024-08-13 00:51:01,954 INFO 127.0.0.1 - - [13/Aug/2024 00:51:01] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2024-08-13 00:51:02,038 INFO 127.0.0.1 - - [13/Aug/2024 00:51:02] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-08-13 00:51:02,052 INFO 127.0.0.1 - - [13/Aug/2024 00:51:02] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-08-13 00:51:02,105 INFO 127.0.0.1 - - [13/Aug/2024 00:51:02] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-08-13 00:51:02,127 INFO 127.0.0.1 - - [13/Aug/2024 00:51:02] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-08-13 00:51:38,638 DEBUG Environment variable FAISS_OPT_LEVEL is not set, so let's pick the instruction set according to the current CPU
+2024-08-13 00:51:38,638 INFO Loading faiss with AVX2 support.
+2024-08-13 00:51:38,669 INFO Successfully loaded faiss with AVX2 support.
+2024-08-13 00:51:38,669 INFO Loaded existing FAISS index from disk.
+2024-08-13 00:51:38,704 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.18.7:5000
+2024-08-13 00:51:38,704 INFO [33mPress CTRL+C to quit[0m
+2024-08-13 00:51:38,721 INFO  * Restarting with watchdog (windowsapi)
+2024-08-13 00:51:40,102 DEBUG Environment variable FAISS_OPT_LEVEL is not set, so let's pick the instruction set according to the current CPU
+2024-08-13 00:51:40,102 INFO Loading faiss with AVX2 support.
+2024-08-13 00:51:40,134 INFO Successfully loaded faiss with AVX2 support.
+2024-08-13 00:51:40,139 INFO Loaded existing FAISS index from disk.
+2024-08-13 00:51:40,158 WARNING  * Debugger is active!
+2024-08-13 00:51:40,168 INFO  * Debugger PIN: 633-891-049
+2024-08-13 00:51:43,211 INFO 127.0.0.1 - - [13/Aug/2024 00:51:43] "GET / HTTP/1.1" 200 -
+2024-08-13 00:51:43,244 INFO 127.0.0.1 - - [13/Aug/2024 00:51:43] "[33mGET /static/style.css HTTP/1.1[0m" 404 -
+2024-08-13 00:51:45,666 INFO 127.0.0.1 - - [13/Aug/2024 00:51:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-08-13 00:51:49,003 DEBUG Starting new HTTP connection (1): localhost:11434
+2024-08-13 00:51:53,088 INFO  * Detected change in 'C:\\Users\\HP\\anaconda3\\Lib\\concurrent\\futures\\_base.py', reloading
+2024-08-13 00:51:53,101 INFO  * Detected change in 'C:\\Users\\HP\\anaconda3\\Lib\\concurrent\\futures\\thread.py', reloading
+2024-08-13 00:51:53,101 INFO  * Detected change in 'C:\\Users\\HP\\anaconda3\\Lib\\site-packages\\requests\\api.py', reloading
+2024-08-13 00:51:53,101 INFO  * Detected change in 'C:\\Users\\HP\\anaconda3\\Lib\\site-packages\\requests\\sessions.py', reloading
+2024-08-13 00:51:53,101 INFO  * Detected change in 'C:\\Users\\HP\\anaconda3\\Lib\\site-packages\\requests\\adapters.py', reloading
+2024-08-13 00:51:53,101 INFO  * Detected change in 'C:\\Users\\HP\\anaconda3\\Lib\\site-packages\\urllib3\\connection.py', reloading
+2024-08-13 00:51:53,101 INFO  * Detected change in 'C:\\Users\\HP\\anaconda3\\Lib\\http\\client.py', reloading
+2024-08-13 00:51:53,101 ERROR An error occurred while processing your question.
+Traceback (most recent call last):
+  File "C:\Users\HP\anaconda3\Lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\HP\anaconda3\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\anaconda3\Lib\site-packages\urllib3\connectionpool.py", line 791, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\site-packages\urllib3\connectionpool.py", line 497, in _make_request
+    conn.request(
+  File "C:\Users\HP\anaconda3\Lib\site-packages\urllib3\connection.py", line 395, in request
+    self.endheaders()
+  File "C:\Users\HP\anaconda3\Lib\http\client.py", line 1289, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\HP\anaconda3\Lib\http\client.py", line 1048, in _send_output
+    self.send(msg)
+  File "C:\Users\HP\anaconda3\Lib\http\client.py", line 986, in send
+    self.connect()
+  File "C:\Users\HP\anaconda3\Lib\site-packages\urllib3\connection.py", line 243, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\site-packages\urllib3\connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001CE7CCBEF50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\anaconda3\Lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\site-packages\urllib3\connectionpool.py", line 845, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=11434): Max retries exceeded with url: /api/embeddings (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001CE7CCBEF50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\anaconda3\Lib\site-packages\langchain_community\embeddings\ollama.py", line 164, in _process_emb_response
+    res = requests.post(
+          ^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\site-packages\requests\adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=11434): Max retries exceeded with url: /api/embeddings (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001CE7CCBEF50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\New Projects 2024\Wakeel-A-llama3-and-RAG-based-chatbot\app\services.py", line 14, in ask_question
+    rag_context = rag_chain.invoke(question)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\site-packages\langchain_core\runnables\base.py", line 2570, in invoke
+    input = step.invoke(input, config, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\site-packages\langchain_core\runnables\base.py", line 3217, in invoke
+    output = {key: future.result() for key, future in zip(steps, futures)}
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\site-packages\langchain_core\runnables\base.py", line 3217, in <dictcomp>
+    output = {key: future.result() for key, future in zip(steps, futures)}
+                   ^^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\concurrent\futures\_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\HP\anaconda3\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\site-packages\langchain_core\retrievers.py", line 222, in invoke
+    raise e
+  File "C:\Users\HP\anaconda3\Lib\site-packages\langchain_core\retrievers.py", line 215, in invoke
+    result = self._get_relevant_documents(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\site-packages\langchain_core\vectorstores\base.py", line 1151, in _get_relevant_documents
+    docs = self.vectorstore.similarity_search(query, **self.search_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\site-packages\langchain_community\vectorstores\faiss.py", line 530, in similarity_search
+    docs_and_scores = self.similarity_search_with_score(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\site-packages\langchain_community\vectorstores\faiss.py", line 402, in similarity_search_with_score
+    embedding = self._embed_query(query)
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\site-packages\langchain_community\vectorstores\faiss.py", line 154, in _embed_query
+    return self.embedding_function.embed_query(text)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\site-packages\langchain_community\embeddings\ollama.py", line 224, in embed_query
+    embedding = self._embed([instruction_pair])[0]
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\site-packages\langchain_community\embeddings\ollama.py", line 199, in _embed
+    return [self._process_emb_response(prompt) for prompt in iter_]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\site-packages\langchain_community\embeddings\ollama.py", line 199, in <listcomp>
+    return [self._process_emb_response(prompt) for prompt in iter_]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\site-packages\langchain_community\embeddings\ollama.py", line 170, in _process_emb_response
+    raise ValueError(f"Error raised by inference endpoint: {e}")
+ValueError: Error raised by inference endpoint: HTTPConnectionPool(host='localhost', port=11434): Max retries exceeded with url: /api/embeddings (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001CE7CCBEF50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+2024-08-13 00:51:53,117 INFO  * Detected change in 'C:\\Users\\HP\\anaconda3\\Lib\\site-packages\\urllib3\\util\\connection.py', reloading
+2024-08-13 00:51:53,133 INFO 127.0.0.1 - - [13/Aug/2024 00:51:53] "POST /ask HTTP/1.1" 200 -
+2024-08-13 00:51:54,337 INFO  * Restarting with watchdog (windowsapi)
+2024-08-13 00:51:55,697 DEBUG Environment variable FAISS_OPT_LEVEL is not set, so let's pick the instruction set according to the current CPU
+2024-08-13 00:51:55,697 INFO Loading faiss with AVX2 support.
+2024-08-13 00:51:55,712 INFO Successfully loaded faiss with AVX2 support.
+2024-08-13 00:51:55,730 INFO Loaded existing FAISS index from disk.
+2024-08-13 00:51:55,744 WARNING  * Debugger is active!
+2024-08-13 00:51:55,744 INFO  * Debugger PIN: 633-891-049
+2024-08-13 00:52:31,527 INFO  * Detected change in 'd:\\New Projects 2024\\Wakeel-A-llama3-and-RAG-based-chatbot\\app\\utils.py', reloading
+2024-08-13 00:52:31,527 INFO  * Detected change in 'd:\\New Projects 2024\\Wakeel-A-llama3-and-RAG-based-chatbot\\app\\utils.py', reloading
+2024-08-13 00:52:32,704 INFO  * Restarting with watchdog (windowsapi)
+2024-08-13 00:52:34,171 DEBUG Environment variable FAISS_OPT_LEVEL is not set, so let's pick the instruction set according to the current CPU
+2024-08-13 00:52:34,171 INFO Loading faiss with AVX2 support.
+2024-08-13 00:52:34,195 INFO Successfully loaded faiss with AVX2 support.
+2024-08-13 00:52:34,206 INFO Loaded existing FAISS index from disk.
+2024-08-13 00:52:34,223 WARNING  * Debugger is active!
+2024-08-13 00:52:34,225 INFO  * Debugger PIN: 633-891-049
+2024-08-13 00:52:43,006 DEBUG Environment variable FAISS_OPT_LEVEL is not set, so let's pick the instruction set according to the current CPU
+2024-08-13 00:52:43,006 INFO Loading faiss with AVX2 support.
+2024-08-13 00:52:43,022 INFO Successfully loaded faiss with AVX2 support.
+2024-08-13 00:52:43,044 INFO Loaded existing FAISS index from disk.
+2024-08-13 00:52:43,064 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.18.7:5000
+2024-08-13 00:52:43,064 INFO [33mPress CTRL+C to quit[0m
+2024-08-13 00:52:43,077 INFO  * Restarting with watchdog (windowsapi)
+2024-08-13 00:52:44,493 DEBUG Environment variable FAISS_OPT_LEVEL is not set, so let's pick the instruction set according to the current CPU
+2024-08-13 00:52:44,493 INFO Loading faiss with AVX2 support.
+2024-08-13 00:52:44,532 INFO Successfully loaded faiss with AVX2 support.
+2024-08-13 00:52:44,547 INFO Loaded existing FAISS index from disk.
+2024-08-13 00:52:44,566 WARNING  * Debugger is active!
+2024-08-13 00:52:44,567 INFO  * Debugger PIN: 633-891-049
+2024-08-13 00:52:49,747 INFO 192.168.18.7 - - [13/Aug/2024 00:52:49] "GET / HTTP/1.1" 200 -
+2024-08-13 00:52:49,770 INFO 192.168.18.7 - - [13/Aug/2024 00:52:49] "[33mGET /static/style.css HTTP/1.1[0m" 404 -
+2024-08-13 00:52:51,011 INFO 192.168.18.7 - - [13/Aug/2024 00:52:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-08-13 00:52:53,084 DEBUG Starting new HTTP connection (1): localhost:11434
+2024-08-13 00:52:57,134 ERROR An error occurred while processing your question.
+Traceback (most recent call last):
+  File "C:\Users\HP\anaconda3\Lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\HP\anaconda3\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\anaconda3\Lib\site-packages\urllib3\connectionpool.py", line 791, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\site-packages\urllib3\connectionpool.py", line 497, in _make_request
+    conn.request(
+  File "C:\Users\HP\anaconda3\Lib\site-packages\urllib3\connection.py", line 395, in request
+    self.endheaders()
+  File "C:\Users\HP\anaconda3\Lib\http\client.py", line 1289, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\HP\anaconda3\Lib\http\client.py", line 1048, in _send_output
+    self.send(msg)
+  File "C:\Users\HP\anaconda3\Lib\http\client.py", line 986, in send
+    self.connect()
+  File "C:\Users\HP\anaconda3\Lib\site-packages\urllib3\connection.py", line 243, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\site-packages\urllib3\connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001BAA60FEE10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\anaconda3\Lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\site-packages\urllib3\connectionpool.py", line 845, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=11434): Max retries exceeded with url: /api/embeddings (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001BAA60FEE10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\anaconda3\Lib\site-packages\langchain_community\embeddings\ollama.py", line 164, in _process_emb_response
+    res = requests.post(
+          ^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\site-packages\requests\adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=11434): Max retries exceeded with url: /api/embeddings (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001BAA60FEE10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\New Projects 2024\Wakeel-A-llama3-and-RAG-based-chatbot\app\services.py", line 14, in ask_question
+    rag_context = rag_chain.invoke(question)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\site-packages\langchain_core\runnables\base.py", line 2570, in invoke
+    input = step.invoke(input, config, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\site-packages\langchain_core\runnables\base.py", line 3217, in invoke
+    output = {key: future.result() for key, future in zip(steps, futures)}
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\site-packages\langchain_core\runnables\base.py", line 3217, in <dictcomp>
+    output = {key: future.result() for key, future in zip(steps, futures)}
+                   ^^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\concurrent\futures\_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\HP\anaconda3\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\site-packages\langchain_core\retrievers.py", line 222, in invoke
+    raise e
+  File "C:\Users\HP\anaconda3\Lib\site-packages\langchain_core\retrievers.py", line 215, in invoke
+    result = self._get_relevant_documents(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\site-packages\langchain_core\vectorstores\base.py", line 1151, in _get_relevant_documents
+    docs = self.vectorstore.similarity_search(query, **self.search_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\site-packages\langchain_community\vectorstores\faiss.py", line 530, in similarity_search
+    docs_and_scores = self.similarity_search_with_score(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\site-packages\langchain_community\vectorstores\faiss.py", line 402, in similarity_search_with_score
+    embedding = self._embed_query(query)
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\site-packages\langchain_community\vectorstores\faiss.py", line 154, in _embed_query
+    return self.embedding_function.embed_query(text)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\site-packages\langchain_community\embeddings\ollama.py", line 224, in embed_query
+    embedding = self._embed([instruction_pair])[0]
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\site-packages\langchain_community\embeddings\ollama.py", line 199, in _embed
+    return [self._process_emb_response(prompt) for prompt in iter_]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\site-packages\langchain_community\embeddings\ollama.py", line 199, in <listcomp>
+    return [self._process_emb_response(prompt) for prompt in iter_]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\anaconda3\Lib\site-packages\langchain_community\embeddings\ollama.py", line 170, in _process_emb_response
+    raise ValueError(f"Error raised by inference endpoint: {e}")
+ValueError: Error raised by inference endpoint: HTTPConnectionPool(host='localhost', port=11434): Max retries exceeded with url: /api/embeddings (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001BAA60FEE10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+2024-08-13 00:52:57,156 INFO 192.168.18.7 - - [13/Aug/2024 00:52:57] "POST /ask HTTP/1.1" 200 -
+2024-08-13 00:54:29,083 DEBUG Environment variable FAISS_OPT_LEVEL is not set, so let's pick the instruction set according to the current CPU
+2024-08-13 00:54:29,083 INFO Loading faiss with AVX2 support.
+2024-08-13 00:54:29,099 INFO Successfully loaded faiss with AVX2 support.
+2024-08-13 00:54:29,123 INFO Loaded existing FAISS index from disk.
+2024-08-13 00:54:29,150 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.18.7:5000
+2024-08-13 00:54:29,150 INFO [33mPress CTRL+C to quit[0m
+2024-08-13 00:54:29,156 INFO  * Restarting with watchdog (windowsapi)
+2024-08-13 00:54:30,682 DEBUG Environment variable FAISS_OPT_LEVEL is not set, so let's pick the instruction set according to the current CPU
+2024-08-13 00:54:30,682 INFO Loading faiss with AVX2 support.
+2024-08-13 00:54:30,713 INFO Successfully loaded faiss with AVX2 support.
+2024-08-13 00:54:30,729 INFO Loaded existing FAISS index from disk.
+2024-08-13 00:54:30,749 WARNING  * Debugger is active!
+2024-08-13 00:54:30,749 INFO  * Debugger PIN: 633-891-049
+2024-08-13 00:54:33,891 INFO 127.0.0.1 - - [13/Aug/2024 00:54:33] "GET / HTTP/1.1" 200 -
+2024-08-13 00:54:33,925 INFO 127.0.0.1 - - [13/Aug/2024 00:54:33] "[33mGET /static/style.css HTTP/1.1[0m" 404 -
+2024-08-13 00:54:36,534 DEBUG Starting new HTTP connection (1): localhost:11434
+2024-08-13 00:54:39,521 DEBUG http://localhost:11434 "POST /api/embeddings HTTP/1.1" 200 None
+2024-08-13 00:54:39,541 ERROR An error occurred while processing your question.
+Traceback (most recent call last):
+  File "d:\New Projects 2024\Wakeel-A-llama3-and-RAG-based-chatbot\app\services.py", line 25, in ask_question
+    formatted_prompt = rag_chain.format(context=rag_context, history=history, question=question)
+                       ^^^^^^^^^^^^^^^^
+AttributeError: 'RunnableSequence' object has no attribute 'format'
+
+2024-08-13 00:54:39,553 INFO 127.0.0.1 - - [13/Aug/2024 00:54:39] "POST /ask HTTP/1.1" 200 -
+2024-08-13 00:55:24,819 INFO  * Detected change in 'C:\\Users\\HP\\anaconda3\\Lib\\site-packages\\_pytest\\compat.py', reloading
+2024-08-13 00:55:24,843 INFO  * Detected change in 'C:\\Users\\HP\\anaconda3\\Lib\\site-packages\\_pytest\\junitxml.py', reloading
+2024-08-13 00:55:26,037 INFO  * Restarting with watchdog (windowsapi)
+2024-08-13 00:55:27,514 DEBUG Environment variable FAISS_OPT_LEVEL is not set, so let's pick the instruction set according to the current CPU
+2024-08-13 00:55:27,521 INFO Loading faiss with AVX2 support.
+2024-08-13 00:55:27,538 INFO Successfully loaded faiss with AVX2 support.
+2024-08-13 00:55:27,547 INFO Loaded existing FAISS index from disk.
+2024-08-13 00:55:27,563 WARNING  * Debugger is active!
+2024-08-13 00:55:27,571 INFO  * Debugger PIN: 633-891-049
+2024-08-13 00:58:31,639 INFO  * Detected change in 'd:\\New Projects 2024\\Wakeel-A-llama3-and-RAG-based-chatbot\\app\\utils.py', reloading
+2024-08-13 00:58:31,655 INFO  * Detected change in 'd:\\New Projects 2024\\Wakeel-A-llama3-and-RAG-based-chatbot\\app\\utils.py', reloading
+2024-08-13 00:58:31,655 INFO  * Detected change in 'd:\\New Projects 2024\\Wakeel-A-llama3-and-RAG-based-chatbot\\app\\utils.py', reloading
+2024-08-13 00:58:32,901 INFO  * Restarting with watchdog (windowsapi)
+2024-08-13 00:58:34,564 DEBUG Environment variable FAISS_OPT_LEVEL is not set, so let's pick the instruction set according to the current CPU
+2024-08-13 00:58:34,564 INFO Loading faiss with AVX2 support.
+2024-08-13 00:58:34,593 INFO Successfully loaded faiss with AVX2 support.
+2024-08-13 00:58:34,605 INFO Loaded existing FAISS index from disk.
+2024-08-13 00:58:34,626 WARNING  * Debugger is active!
+2024-08-13 00:58:34,630 INFO  * Debugger PIN: 633-891-049
+2024-08-13 00:59:16,454 INFO  * Detected change in 'd:\\New Projects 2024\\Wakeel-A-llama3-and-RAG-based-chatbot\\app\\services.py', reloading
+2024-08-13 00:59:16,454 INFO  * Detected change in 'd:\\New Projects 2024\\Wakeel-A-llama3-and-RAG-based-chatbot\\app\\services.py', reloading
+2024-08-13 00:59:17,659 INFO  * Restarting with watchdog (windowsapi)
+2024-08-13 00:59:19,308 DEBUG Environment variable FAISS_OPT_LEVEL is not set, so let's pick the instruction set according to the current CPU
+2024-08-13 00:59:19,308 INFO Loading faiss with AVX2 support.
+2024-08-13 00:59:19,335 INFO Successfully loaded faiss with AVX2 support.
+2024-08-13 00:59:19,343 INFO Loaded existing FAISS index from disk.
+2024-08-13 00:59:19,360 WARNING  * Debugger is active!
+2024-08-13 00:59:19,367 INFO  * Debugger PIN: 633-891-049
+2024-08-13 00:59:39,831 INFO  * Detected change in 'd:\\New Projects 2024\\Wakeel-A-llama3-and-RAG-based-chatbot\\app\\services.py', reloading
+2024-08-13 00:59:39,853 INFO  * Detected change in 'd:\\New Projects 2024\\Wakeel-A-llama3-and-RAG-based-chatbot\\app\\services.py', reloading
+2024-08-13 00:59:39,854 INFO  * Detected change in 'd:\\New Projects 2024\\Wakeel-A-llama3-and-RAG-based-chatbot\\app\\services.py', reloading
+2024-08-13 00:59:41,086 INFO  * Restarting with watchdog (windowsapi)
+2024-08-13 00:59:42,655 DEBUG Environment variable FAISS_OPT_LEVEL is not set, so let's pick the instruction set according to the current CPU
+2024-08-13 00:59:42,655 INFO Loading faiss with AVX2 support.
+2024-08-13 00:59:42,674 INFO Successfully loaded faiss with AVX2 support.
+2024-08-13 00:59:42,690 INFO Loaded existing FAISS index from disk.
+2024-08-13 00:59:42,705 WARNING  * Debugger is active!
+2024-08-13 00:59:42,712 INFO  * Debugger PIN: 633-891-049
+2024-08-13 00:59:47,179 INFO 127.0.0.1 - - [13/Aug/2024 00:59:47] "GET / HTTP/1.1" 200 -
+2024-08-13 00:59:47,203 INFO 127.0.0.1 - - [13/Aug/2024 00:59:47] "[33mGET /static/style.css HTTP/1.1[0m" 404 -
+2024-08-13 00:59:50,646 DEBUG Starting new HTTP connection (1): localhost:11434
+2024-08-13 00:59:53,256 DEBUG http://localhost:11434 "POST /api/embeddings HTTP/1.1" 200 None
+2024-08-13 00:59:53,262 DEBUG Starting new HTTP connection (1): 192.192.8.114:11434
+2024-08-13 00:59:53,914 DEBUG http://192.192.8.114:11434 "POST /api/chat HTTP/1.1" 200 None
+2024-08-13 00:59:54,863 INFO 127.0.0.1 - - [13/Aug/2024 00:59:54] "POST /ask HTTP/1.1" 200 -
+2024-08-13 01:00:13,159 DEBUG Starting new HTTP connection (1): localhost:11434
+2024-08-13 01:00:15,253 DEBUG http://localhost:11434 "POST /api/embeddings HTTP/1.1" 200 None
+2024-08-13 01:00:15,259 DEBUG Starting new HTTP connection (1): 192.192.8.114:11434
+2024-08-13 01:00:15,727 DEBUG http://192.192.8.114:11434 "POST /api/chat HTTP/1.1" 200 None
+2024-08-13 01:00:17,925 INFO 127.0.0.1 - - [13/Aug/2024 01:00:17] "POST /ask HTTP/1.1" 200 -
+2024-08-13 01:00:30,222 DEBUG Starting new HTTP connection (1): localhost:11434
+2024-08-13 01:00:32,304 DEBUG http://localhost:11434 "POST /api/embeddings HTTP/1.1" 200 None
+2024-08-13 01:00:32,306 DEBUG Starting new HTTP connection (1): 192.192.8.114:11434
+2024-08-13 01:00:33,049 DEBUG http://192.192.8.114:11434 "POST /api/chat HTTP/1.1" 200 None
+2024-08-13 01:00:33,672 INFO 127.0.0.1 - - [13/Aug/2024 01:00:33] "POST /ask HTTP/1.1" 200 -
+2024-08-13 01:01:37,880 INFO  * Detected change in 'd:\\New Projects 2024\\Wakeel-A-llama3-and-RAG-based-chatbot\\app.py', reloading
+2024-08-13 01:01:39,119 INFO  * Restarting with watchdog (windowsapi)
+2024-08-13 01:01:40,914 DEBUG Environment variable FAISS_OPT_LEVEL is not set, so let's pick the instruction set according to the current CPU
+2024-08-13 01:01:40,914 INFO Loading faiss with AVX2 support.
+2024-08-13 01:01:40,936 INFO Successfully loaded faiss with AVX2 support.
+2024-08-13 01:01:40,965 INFO Loaded existing FAISS index from disk.
+2024-08-13 01:01:40,990 WARNING  * Debugger is active!
+2024-08-13 01:01:40,991 INFO  * Debugger PIN: 633-891-049

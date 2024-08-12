@@ -3,3 +3,5 @@
 *.pkl
 test.py
 /flask_session
+/app/__pycache__
+/app/config/__pycache__
