@@ -38,20 +38,33 @@ This project implements a Flask-based chatbot that answers questions about the C
 
 1. **Run the Application**
     ```bash
-    python app.py
+    python main.py
+    ```
+    or
+   ```bash
+    python -m app
     ```
 
-2. **Access the Chatbot**
+3. **Access the Chatbot**
     Open your browser and navigate to `http://127.0.0.1:5000` to interact with the chatbot.
 
 ## Project Structure
 
 ```bash
 CounselorAI-A-llama3-and-RAG-based-chatbot/
-├── templates/
-│   └── index.html            # HTML template for the chatbot interface
+
+├── app/
+|   ├── templates/
+│       └── index.html            # HTML template for the chatbot interface
+|   ├── __init__.py
+│   ├── routes.py
+│   ├── services.py
+│   ├── utils.py
+│   └── config/
+│       ├── __init__.py
+│       └── logging_config.py
 │
-├── app.py                    # Main Flask application
+├── main.py                    # Main Flask application
 ├── requirements.txt          # Python dependencies
 ├── knowledge_base.pdf        # PDF document of the Constitution of Pakistan
 ├── faiss_index.pkl           # Serialized FAISS index (generated)
@@ -59,12 +72,6 @@ CounselorAI-A-llama3-and-RAG-based-chatbot/
 └── README.md                 # This README file
 ```
 
-## Key Functions
-
-- **extract_text_from_pdf(pdf_path)**: Extracts text from the specified PDF file.
-- **save_faiss_index(db, documents, index_path, docs_path)**: Saves the FAISS index and documents to disk.
-- **load_faiss_index(index_path, docs_path)**: Loads the FAISS index and documents from disk.
-- **ask_question(question)**: Processes a question using the RAG chain and returns an answer.
 
 ## Logging
 
