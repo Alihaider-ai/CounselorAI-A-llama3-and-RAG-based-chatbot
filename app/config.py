@@ -15,6 +15,6 @@ class Config:
     DOCS_PATH = "docs.pkl"
     
     # LLM Config
-    LLM_MODEL = "llama3"
+    LLM_MODEL = "gemini-pro" #llama3 phi3:mini
     MAX_TOKENS = 3000
     TEMPERATURE = 0

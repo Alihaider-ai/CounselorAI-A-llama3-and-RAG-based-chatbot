@@ -46,8 +46,12 @@ class ChatBot:
             
             conversation_history = session['conversation_history']
             history = "\n".join([f"Q: {q}\nA: {a}" for q, a in conversation_history])
-            
-            answer = self.llm_handler.get_answer(question, history)
+            intent = self.llm_handler.detect_constitution_intent(question, history)
+            print(intent)
+            if intent==True:
+                answer = self.llm_handler.get_answer(question, history)
+            else:
+                answer = self.llm_handler.basic_response(question, history)
             
             conversation_history.append((question, answer))
             session['conversation_history'] = conversation_history

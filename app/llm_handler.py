@@ -4,6 +4,7 @@ from langchain.prompts import ChatPromptTemplate
 from langchain.schema.runnable import RunnablePassthrough
 import os
 from dotenv import load_dotenv
+from typing import Any
 
 class LLMHandler:
     TEMPLATE = """Based solely on the provided context and conversation history, please answer the following question.
@@ -49,6 +50,43 @@ class LLMHandler:
             max_tokens=max_tokens,
             temperature=temperature
         )
+        
+    def detect_constitution_intent(self, question: str,history:Any) -> bool:
+        intent_prompt = ChatPromptTemplate.from_template(
+            """Determine if the following question is asking about the Constitution of Pakistan.
+            Return only 'true' or 'false'.
+            
+            Question: {question}
+            Conversation History: {history}
+            Answer (true/false):"""
+        )
+        
+        # Use basic LLM chain for intent detection
+        if isinstance(self.llm, ChatOllama):
+            response = self.llm.invoke(intent_prompt.format_messages(question=question, history=history))
+        else:
+            response = self.llm.invoke(intent_prompt.format_messages(question=question, history=history))
+        
+        return response.content.strip().lower() == 'true'
+
+    def basic_response(self, question: str,history:str) -> str:
+        basic_prompt = ChatPromptTemplate.from_template(
+            """You are a helpful assistant that encourages users to ask questions about the Constitution of Pakistan.
+            
+            If the question is not about the Constitution of Pakistan, provide a brief answer and suggest asking about the Constitution.
+            
+            User question: {question}
+            Conversation History: {history}
+            Response:"""
+        )
+        
+        # Use basic LLM chain for response
+        if isinstance(self.llm, ChatOllama):
+            response = self.llm.invoke(basic_prompt.format_messages(question=question, history=history))
+        else:
+            response = self.llm.invoke(basic_prompt.format_messages(question=question, history=history))
+        
+        return response.content.strip()
 
     def setup_rag_chain(self, retriever):
         self.rag_chain = (
