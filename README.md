@@ -40,37 +40,44 @@ This project implements a Flask-based chatbot that answers questions about the C
     ```bash
     python main.py
     ```
-    or
-   ```bash
-    python -m app
-    ```
 
 3. **Access the Chatbot**
     Open your browser and navigate to `http://127.0.0.1:5000` to interact with the chatbot.
 
 ## Project Structure
 
-```bash
-CounselorAI-A-llama3-and-RAG-based-chatbot/
+```mermaid
+graph TD
+    subgraph Frontend
+        A[Flask Templates] --> B[User Interface]
+        B --> C[AJAX Requests]
+    end
 
-├── app/
-|   ├── templates/
-│       └── index.html            # HTML template for the chatbot interface
-|   ├── __init__.py
-│   ├── routes.py
-│   ├── services.py
-│   ├── utils.py
-│   └── config/
-│       ├── __init__.py
-│       └── logging_config.py
-│
-├── main.py                    # Main Flask application
-├── requirements.txt          # Python dependencies
-├── knowledge_base.pdf        # PDF document of the Constitution of Pakistan
-├── faiss_index.pkl           # Serialized FAISS index (generated)
-├── docs.pkl                  # Serialized document splits (generated)
-└── README.md                 # This README file
-```
+    subgraph Backend Processing
+        C --> D[Flask Routes]
+        D --> E[Intent Detection]
+        E --> F{Constitution Query?}
+
+        F -->|Yes| G[RAG Pipeline]
+        F -->|No| H[Basic LLM Response]
+
+        G --> I[FAISS Vector Store]
+        I --> J[Context Retrieval]
+        J --> K[LLM Processing]
+
+        H --> K
+    end
+
+    subgraph Data Layer
+        L[(FAISS Index)]
+        M[(Flask Session)]
+        N[Constitution PDF]
+
+        N -->|Initialization| L
+    end
+
+    K --> O[Response]
+    O --> M
 
 
 ## Logging
