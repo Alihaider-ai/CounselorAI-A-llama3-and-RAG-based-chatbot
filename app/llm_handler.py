@@ -45,7 +45,7 @@ class LLMHandler:
     def _setup_ollama(self, model, max_tokens, temperature):
         return ChatOllama(
             model=model,
-            keep_alive="-1",
+            # keep_alive="-1", # Uncomment this line to keep the model alive
             max_tokens=max_tokens,
             temperature=temperature
         )
