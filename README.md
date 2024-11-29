@@ -44,16 +44,15 @@ This project implements a Flask-based chatbot that answers questions about the C
 3. **Access the Chatbot**
     Open your browser and navigate to `http://127.0.0.1:5000` to interact with the chatbot.
 
-## Project Structure
+# Project Diagram
 
+```mermaid
 graph TD
-    %% Frontend
     subgraph Frontend
         A[Flask Templates] --> B[User Interface]
         B --> C[AJAX Requests]
     end
 
-    %% Backend Processing
     subgraph Backend Processing
         C --> D[Flask Routes]
         D --> E[Intent Detection]
@@ -69,7 +68,6 @@ graph TD
         H --> K
     end
 
-    %% Data Layer  
     subgraph Data Layer
         L[(FAISS Index)]
         N[Constitution PDF]
@@ -79,6 +77,7 @@ graph TD
 
     K --> O[Response]
 
+```
 
 ## Logging
 
